@@ -1,0 +1,30 @@
+Installations needed:
+- python
+- VS Code - extensions : python
+
+- virtual environment
+    - create venv = py -3 -m venv venv
+    - select the new venv as the interpreter
+    - activate the venv - venv/Scripts/activate
+
+- install fastapi : pip install fastapi[all]
+- now import the fastapi in main.py and continue
+
+- run the api : uvicorn main:app --reload   
+    {main - file name, app - fastAPI reference, --reload - to reload the server}
+
+
+# first program 
+
+    from fastapi import FastAPI
+
+    app = FastAPI()
+
+    # path operations/route - function and the decorator
+    # async - to perform asyncronous task (optional right now)
+    # function is same as the python function, return which will be sent back as response in json
+    # to make the function as api we need decorator
+    @app.get("/")
+    async def root():
+        return {"message": "Hello World!"}
+    # parenthesis has the url ("/")
