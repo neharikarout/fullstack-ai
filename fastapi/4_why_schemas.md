@@ -11,11 +11,11 @@
 
 
  so we do following:
-    -- from pydantic import BaseModel
-    -- class Post(BaseModel): # defined schema
+-- from pydantic import BaseModel
+-- class Post(BaseModel): # defined schema
         title: str
         content: str
-    -- @app.post("/createposts")
+ -- @app.post("/createposts")
         def create_posts(new_post: Post): 
             print(new_post)  # title='top beaches in florida' content='checkout the beaches'
             print(new_post.title) # top beaches in florida
